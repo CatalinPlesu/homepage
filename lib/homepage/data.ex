@@ -25,40 +25,38 @@ defmodule Homepage.Data do
         """,
         marquee_text: "CĂTĂLIN PLEȘU"
       },
-      pages: %{
-        home:
-          %{
-          },
+      pages: [
+        home: %{},
+        about: %{},
         contact: %{
-          links: %{
-            "Telegram" => "https://t.me/catalinplesu",
-            "Twitter" => "https://twitter.com/catalinplesu",
-          }
-        },
-        about: %{
+          links: [
+            {"Telegram", "https://t.me/catalinplesu"},
+            {"Twitter", "https://twitter.com/catalinplesu"},
+            {"Email", "mailto:catalin.plesu@proton.me"},
+
+          ]
         },
         projects: %{
-          links: %{
-            "Github" => "https://github.com/CatalinPlesu",
-            "Gitlab" => "https://gitlab.com/catalinplesu",
-            "Oroboros" => "https://oroboros.app"
-          }
+          links: [
+            {"Github", "https://github.com/CatalinPlesu"},
+            {"Gitlab", "https://gitlab.com/catalinplesu"},
+            {"Oroboros", "https://oroboros.app"}
+          ]
         },
         links: %{
-          links: %{
-            "Github" => "https://github.com/CatalinPlesu",
-            "Gitlab" => "https://gitlab.com/catalinplesu",
-            "Telegram" => "https://t.me/catalinplesu",
-            "Reddit" => "https://www.reddit.com/user/_katarin",
-            "Twitter" => "https://twitter.com/catalinplesu",
-            "YouTube" => "https://www.youtube.com/channel/UC752pTuCebS37pCYwYPirow",
-            "LinkedIn" => "https://www.linkedin.com/in/c%C4%83t%C4%83lin-ple%C8%99u-042872209/",
-            "Resume" => "/static/Catalin_Plesu_Resume.pdf",
-            "Oroboros" => "https://oroboros.app"
-          }
+          links: [
+            {"Github", "https://github.com/CatalinPlesu"},
+            {"Gitlab", "https://gitlab.com/catalinplesu"},
+            {"Telegram", "https://t.me/catalinplesu"},
+            {"Reddit", "https://www.reddit.com/user/_katarin"},
+            {"Twitter", "https://twitter.com/catalinplesu"},
+            {"YouTube", "https://www.youtube.com/channel/UC752pTuCebS37pCYwYPirow"},
+            {"LinkedIn", "https://www.linkedin.com/in/c%C4%83t%C4%83lin-ple%C8%99u-042872209/"},
+            {"Resume", "/static/Catalin_Plesu_Resume.pdf"},
+            {"Oroboros", "https://oroboros.app"}
+          ]
         }
-        # You could add specific content for each page section if needed
-      },
+      ],
       footer: %{
         status: "⚡ System Ready",
         last_updated: "29/09/2025"
