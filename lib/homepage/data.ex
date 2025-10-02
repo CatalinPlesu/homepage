@@ -10,7 +10,7 @@ defmodule Homepage.Data do
       profile: %{
         name: "Cătălin Pleșu",
         title: "Cătălin Pleșu - Homepage",
-        tagline: "Full-Stack Developer | Elixir & Python Enthusiast | Former Embedded Engineer",
+        tagline: "Elixir Enthusiast ⚡ |> Full-stack Engineer |> Creating Oroboros",
         secondary_tagline: "Gruvbox ♥️",
         ascii_art: """
         ╔═══════════════════════════════════════════════════════════════════╗
