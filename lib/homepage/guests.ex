@@ -121,4 +121,12 @@ defmodule Homepage.Guests do
         id
     end
   end
+
+  def get_total_guests() do
+    query =
+      from g in Guest,
+        select: g.id
+
+    query |> last(:inserted_at) |> Repo.one()
+  end
 end
