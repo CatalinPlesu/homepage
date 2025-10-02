@@ -145,7 +145,7 @@ defmodule HomepageWeb.PageLive do
 
         <div class="counter">
           <div>👁️ YOU ARE VISITOR NUMBER:</div>
-          <div class="counter-number">000042</div>
+          <div class="counter-number">{String.pad_leading(Integer.to_string(@guest_number), 5, "0")}</div>
         </div>
       </div>
       <div class="status-bar">
@@ -158,6 +158,7 @@ defmodule HomepageWeb.PageLive do
 
   def mount(_params, session, socket) do
     guest_id = session["guest_id"]
+    guest_number = Homepage.Guests.get_guest_number!(guest_id)
 
     data = Homepage.Data.get()
     [head | _] = data.pages
@@ -168,6 +169,7 @@ defmodule HomepageWeb.PageLive do
       |> assign(:data, data)
       |> assign(:selected, atom)
       |> assign(:page, nil)
+      |> assign(:guest_number, guest_number)
 
     {:noreply, socket} = handle_event("select-page", %{"page" => "home"}, socket)
 
