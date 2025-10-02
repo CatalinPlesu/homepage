@@ -144,10 +144,11 @@ defmodule HomepageWeb.PageLive do
         <% end %>
 
         <div class="counter">
-          <div>👁️ YOU ARE VISITOR NUMBER:</div>
+          <div class="counter-label">
+            {if @showing_current, do: "👁️ YOU ARE VISITOR NUMBER:", else: "👁️ TOTAL VISITORS:"}
+          </div>
           <div class="counter-number">
-            {String.pad_leading(Integer.to_string(@guest_number), 5, "0")}
-            {String.pad_leading(Integer.to_string(@total_visitors), 5, "0")}
+            {String.pad_leading(Integer.to_string(@display_number), 5, "0")}
           </div>
         </div>
       </div>
@@ -175,8 +176,13 @@ defmodule HomepageWeb.PageLive do
       |> assign(:page, nil)
       |> assign(:guest_number, guest_number)
       |> assign(:total_visitors, total_visitors)
+      |> assign(:showing_current, true)
+      |> assign(:display_number, guest_number)
 
     {:noreply, socket} = handle_event("select-page", %{"page" => "home"}, socket)
+
+    # Start the timer to swap numbers
+    Process.send_after(self(), :swap_visitor_number, 3000)
 
     {:ok, socket}
   end
@@ -193,6 +199,23 @@ defmodule HomepageWeb.PageLive do
       socket
       |> assign(:page, page)
       |> assign(:selected, page_atom)
+
+    {:noreply, socket}
+  end
+
+  def handle_info(:swap_visitor_number, socket) do
+    showing_current = !socket.assigns.showing_current
+
+    display_number =
+      if showing_current, do: socket.assigns.guest_number, else: socket.assigns.total_visitors
+
+    socket =
+      socket
+      |> assign(:showing_current, showing_current)
+      |> assign(:display_number, display_number)
+
+    # Schedule next swap
+    Process.send_after(self(), :swap_visitor_number, 3000)
 
     {:noreply, socket}
   end
