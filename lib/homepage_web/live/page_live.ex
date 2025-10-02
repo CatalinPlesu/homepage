@@ -156,7 +156,9 @@ defmodule HomepageWeb.PageLive do
     """
   end
 
-  def mount(_params, _session, socket) do
+  def mount(_params, session, socket) do
+    guest_id = session["guest_id"]
+
     data = Homepage.Data.get()
     [head | _] = data.pages
     {atom, _} = head
