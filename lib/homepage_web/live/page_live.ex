@@ -90,7 +90,7 @@ defmodule HomepageWeb.PageLive do
             </div>
           </div>
           
-          <!-- Projects Page -->
+    <!-- Projects Page -->
           <div :if={page_atom == :projects} class="content projects-content">
             <h2>Projects</h2>
             <%= for project <- page_content.projects_list do %>
