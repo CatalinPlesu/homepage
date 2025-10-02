@@ -110,7 +110,7 @@ defmodule HomepageWeb.PageLive do
                     <% end %>
                   </div>
                 </div>
-                <p class="project-description">{project.description}</p>
+                <p class="project-description">{raw(project.description)}</p>
                 <div class="tech-tags">
                   <%= for tech <- project.technologies do %>
                     <span class="tech-tag">{tech}</span>
@@ -145,7 +145,9 @@ defmodule HomepageWeb.PageLive do
 
         <div class="counter">
           <div>👁️ YOU ARE VISITOR NUMBER:</div>
-          <div class="counter-number">{String.pad_leading(Integer.to_string(@guest_number), 5, "0")}</div>
+          <div class="counter-number">
+            {String.pad_leading(Integer.to_string(@guest_number), 5, "0")}
+          </div>
         </div>
       </div>
       <div class="status-bar">

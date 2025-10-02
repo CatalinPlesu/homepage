@@ -91,6 +91,13 @@ defmodule Homepage.Data do
                 "Developed a Python-based web scraper and data pipeline to collect, structure, and analyze job postings. Used Pandas for data analysis and JSON for storage.",
               git_link: "https://github.com/CatalinPlesu/job_market_md_refactor",
               technologies: ["Python", "Web Scraping", "Data Analysis"]
+            },
+            %{
+              name: "Demo",
+              description:
+                "Subdomain to which i might choose to expose the thing i am working currently using <b>ssh -R</b>",
+              live_link: "https://dev.catalinplesu.xyz/",
+              technologies: ["ssh", "Caddy"]
             }
           ]
         },
