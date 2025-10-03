@@ -1,6 +1,8 @@
 # The directory Mix will write compiled artifacts to.
 /_build/
 
+/rel/
+
 # If you run "mix test --cover", coverage assets end up here.
 /cover/
 
@@ -39,3 +41,5 @@ npm-debug.log
 *.db
 *.db-*
 
+homepage.image
+.env
