@@ -161,6 +161,7 @@ defmodule HomepageWeb.PageLive do
   end
 
   def mount(_params, session, socket) do
+
     guest_id = session["guest_id"]
     guest_number = Homepage.Guests.get_guest_number!(guest_id)
     total_visitors = Homepage.Guests.get_total_guests()
@@ -178,6 +179,7 @@ defmodule HomepageWeb.PageLive do
       |> assign(:total_visitors, total_visitors)
       |> assign(:showing_current, true)
       |> assign(:display_number, guest_number)
+      |> assign(:page_title, data.profile.title)
 
     {:noreply, socket} = handle_event("select-page", %{"page" => "home"}, socket)
 
