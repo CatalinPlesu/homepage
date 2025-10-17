@@ -100,7 +100,7 @@ defmodule HomepageWeb.PageLive do
                           <a
                             href={project.live_link}
                             target="_blank"
-                            class="btn btn-xs btn-error btn-outline"
+                            class="btn btn-xs btn-error"
                           >
                             <i class="fa-regular fa-circle-dot"></i> Live
                           </a>
