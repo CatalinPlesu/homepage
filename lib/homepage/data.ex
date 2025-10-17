@@ -9,55 +9,44 @@ defmodule Homepage.Data do
     %{
       profile: %{
         name: "Cătălin Pleșu",
-        title: "Cătălin Pleșu - Homepage",
-        tagline: "Elixir Enthusiast ⚡ |> Full-stack Engineer |> Creating Oroboros",
-        secondary_tagline: "Gruvbox ♥️",
-        ascii_art: """
-        ╔═══════════════════════════════════════════════════════════════════╗
-        ║  ▄████▄   ▄▄▄     ▄▄▄█████▓ ▄▄▄       ██▓     ██▓ ███▄    █      ║
-        ║ ▒██▀ ▀█  ▒████▄   ▓  ██▒ ▓▒▒████▄    ▓██▒    ▓██▒ ██ ▀█   █      ║
-        ║ ▒▓█    ▄ ▒██  ▀█▄ ▒ ▓██░ ▒░▒██  ▀█▄  ▒██░    ▒██▒▓██  ▀█ ██▒     ║
-        ║ ▒▓▓▄ ▄██▒░██▄▄▄▄██░ ▓██▓ ░ ░██▄▄▄▄██ ▒██░    ░██░▓██▒  ▐▌██▒     ║
-        ║ ▒ ▓███▀ ░ ▓█   ▓██▒ ▒██▒ ░  ▓█   ▓██▒░██████▒░██░▒██░   ▓██░     ║
-        ║ ░ ░▒ ▒  ░ ▒▒   ▓▒█░ ▒ ░░    ▒▒   ▓▒█░░ ▒░▓  ░░▓  ░ ▒░   ▒ ▒      ║
-        ╚═══════════════════════════════════════════════════════════════════╝
-        """,
-        marquee_text: "CĂTĂLIN PLEȘU"
+        title: "Cătălin Pleșu - Homepage"
       },
       pages: [
-        home: %{},
         about: %{
           summary:
             "Independent developer working with Elixir and Phoenix. Currently focused on building projects in productivity and personal development.",
-          education: [
-            %{
-              institution: "Technical University of Moldova",
-              degree: "Master’s Degree in Information Technology",
-              location: "Chișinău, Moldova",
-              dates: "2024 - Present"
-            },
-            %{
-              institution: "Technical University of Moldova",
-              degree: "Bachelor’s Degree in Information Technology",
-              location: "Chișinău, Moldova",
-              dates: "2020 - 2024"
-            }
-          ],
-          experience: [
-            %{
-              company: "AROBS Software",
-              position: "Junior Embedded Software Engineer",
-              location: "Chișinău, Moldova",
-              dates: "2023 - 2024"
-            }
-          ]
+          education:
+            {[
+               %{
+                 institution: "Technical University of Moldova",
+                 degree: "Master’s Degree in Information Technology",
+                 location: "Chișinău, Moldova",
+                 dates: "2024 - Present"
+               },
+               %{
+                 institution: "Technical University of Moldova",
+                 degree: "Bachelor’s Degree in Information Technology",
+                 location: "Chișinău, Moldova",
+                 dates: "2020 - 2024"
+               }
+             ], "fa-solid fa-building-columns"},
+          experience:
+            {[
+               %{
+                 company: "AROBS Software",
+                 position: "Junior Embedded Software Engineer",
+                 location: "Chișinău, Moldova",
+                 dates: "2023 - 2024"
+               }
+             ], "fa-solid fa-briefcase"}
         },
         contact: %{
           links: [
-            {"Telegram", "https://t.me/catalinplesu"},
-            {"Email", "mailto:catalin.plesu@proton.me"},
-            {"Twitter", "https://twitter.com/catalinplesu"},
-            {"LinkedIn", "https://www.linkedin.com/in/c%C4%83t%C4%83lin-ple%C8%99u-042872209/"}
+            {"Telegram", "https://t.me/catalinplesu", "fa-brands fa-telegram"},
+            {"Email", "mailto:catalin.plesu@proton.me", "fa-solid fa-envelope"},
+            {"Twitter", "https://twitter.com/catalinplesu", "fa-brands fa-twitter"},
+            {"LinkedIn", "https://www.linkedin.com/in/c%C4%83t%C4%83lin-ple%C8%99u-042872209/",
+             "fa-brands fa-telegram"}
           ]
         },
         projects: %{
@@ -103,19 +92,21 @@ defmodule Homepage.Data do
         },
         links: %{
           links: [
-            {"Github", "https://github.com/CatalinPlesu"},
-            {"Gitlab", "https://gitlab.com/catalinplesu"},
-            {"Telegram", "https://t.me/catalinplesu"},
-            {"Reddit", "https://www.reddit.com/user/_katarin"},
-            {"Twitter", "https://twitter.com/catalinplesu"},
-            {"YouTube", "https://www.youtube.com/channel/UC752pTuCebS37pCYwYPirow"},
-            {"LinkedIn", "https://www.linkedin.com/in/c%C4%83t%C4%83lin-ple%C8%99u-042872209/"}
+            {"Github", "https://github.com/CatalinPlesu", "fa-brands fa-github"},
+            {"Gitlab", "https://gitlab.com/catalinplesu", "fa-brands fa-gitlab"},
+            {"Telegram", "https://t.me/catalinplesu", "fa-brands fa-telegram"},
+            {"Reddit", "https://www.reddit.com/user/_katarin", "fa-brands fa-reddit"},
+            {"Twitter", "https://twitter.com/catalinplesu", "fa-brands fa-twitter"},
+            {"YouTube", "https://www.youtube.com/channel/UC752pTuCebS37pCYwYPirow",
+             "fa-brands fa-youtube"},
+            {"LinkedIn", "https://www.linkedin.com/in/c%C4%83t%C4%83lin-ple%C8%99u-042872209/",
+             "fa-brands fa-linkedin"}
           ]
         }
       ],
       footer: %{
-        status: "⚡ System Ready",
-        last_updated: "02/10/2025"
+        status: ~s[<i class="fa-solid fa-bolt"></i> System Ready],
+        last_updated: "17/10/2025"
       }
     }
   end
