@@ -52,6 +52,15 @@ defmodule Homepage.Data do
         projects: %{
           projects_list: [
             %{
+              name: "Tango Counter API",
+              description:
+                "A universal page view counter API built with C# that returns SVG badges to track views across any platform.",
+              git_link: "https://github.com/catalinplesu/tango-counter-api.git",
+              live_link:
+                "https://tango-counter-api.catalinplesu.xyz/api/counter/catalinplesu-xyz",
+              technologies: ["C#", "ASP.NET Core", "Sqlite"]
+            },
+            %{
               name: "ErgoType",
               description:
                 "A tool in python that uses Genetic Algorithms to create a better keyboard layout.",
