@@ -14,24 +14,30 @@ defmodule Homepage.Data do
       pages: [
         about: %{
           summary:
-            "Independent developer working with Elixir and Phoenix. Currently focused on building projects in productivity and personal development.",
+            "Backend developer working with C# with interest in Elixir and Phoenix. Focused on shipping products, data analysis, and finding information.",
           education:
             {[
                %{
                  institution: "Technical University of Moldova",
-                 degree: "Master’s Degree in Information Technology",
+                 degree: "Master's Degree in Information Technology",
                  location: "Chișinău, Moldova",
-                 dates: "2024 - Present"
+                 dates: "2024 - Jan 2026"
                },
                %{
                  institution: "Technical University of Moldova",
-                 degree: "Bachelor’s Degree in Information Technology",
+                 degree: "Bachelor's Degree in Information Technology",
                  location: "Chișinău, Moldova",
                  dates: "2020 - 2024"
                }
              ], "fa-solid fa-building-columns"},
           experience:
             {[
+               %{
+                 company: "Jivy Group",
+                 position: "C# Backend Developer",
+                 location: "Chișinău, Moldova",
+                 dates: "Nov 2025 - Jan 2026"
+               },
                %{
                  company: "AROBS Software",
                  position: "Junior Embedded Software Engineer",
@@ -43,52 +49,49 @@ defmodule Homepage.Data do
         contact: %{
           links: [
             {"Telegram", "https://t.me/catalinplesu", "fa-brands fa-telegram"},
-            {"Email", "mailto:catalin.plesu@proton.me", "fa-solid fa-envelope"},
-            {"Twitter", "https://twitter.com/catalinplesu", "fa-brands fa-twitter"},
-            {"LinkedIn", "https://www.linkedin.com/in/c%C4%83t%C4%83lin-ple%C8%99u-042872209/",
-             "fa-brands fa-telegram"}
+            {"Email", "mailto:catalin.plesu@proton.me", "fa-solid fa-envelope"}
           ]
         },
         projects: %{
           projects_list: [
             %{
-              name: "Tango Counter API",
-              description:
-                "A universal page view counter API built with C# that returns SVG badges to track views across any platform.",
-              git_link: "https://github.com/catalinplesu/tango-counter-api.git",
-              live_link:
-                "https://tango-counter-api.catalinplesu.xyz/api/counter/catalinplesu-xyz",
-              technologies: ["C#", "ASP.NET Core", "Sqlite"]
-            },
-            %{
               name: "ErgoType",
               description:
-                "A tool in python that uses Genetic Algorithms to create a better keyboard layout.",
+                "An intelligent keyboard layout optimization tool using genetic algorithms to create personalized layouts based on your typing patterns. Analyzes your text data to minimize finger travel distance and maximize typing comfort.",
               git_link: "https://github.com/CatalinPlesu/ErgoType.2",
-              technologies: ["Python", "Genetic Algorithms"]
+              technologies: ["Python", "Genetic Algorithms", "Data Analysis"],
+              status: "In Progress"
             },
             %{
               name: "CV Builder",
               description:
-                "Built a tag-driven CV Builder web application in Ruby on Rails with SQLite, following MVC architecture. Created a LaTeX-to-PDF generation pipeline. Deployed using Podman.",
+                "A modern CV/resume builder with real-time preview and multiple export formats. Built with Ruby on Rails and deployed on Render.",
               git_link: "https://github.com/CatalinPlesu/cv_builder",
-              live_link: "https://cv-builder.catalinplesu.xyz/",
-              technologies: ["Ruby on Rails", "MVC", "LaTeX", "PDF", "Podman", "SQLite"]
-            },
-            %{
-              name: "Oroboros Landing Page",
-              description:
-                "Built a landing page and admin dashboard using Elixir/Phoenix. Used SQLite database, in-memory caching, comment moderation, and analytics collection. Deployed on a Hetzner VPS using Docker and Caddy.",
-              git_link: "https://github.com/CatalinPlesu/oroboros_landing",
-              live_link: "https://oroboros.app/",
-              technologies: ["Elixir", "Phoenix", "SQLite", "Docker", "Caddy", "VPS"]
+              live_link: "https://cv-builder-qhps.onrender.com/",
+              technologies: ["Ruby", "Rails", "PostgreSQL", "Render"]
             },
             %{
               name: "Moldova Job Market Analysis",
               description:
-                "Developed a Python-based web scraper and data pipeline to collect, structure, and analyze job postings. Used Pandas for data analysis and JSON for storage.",
-              git_link: "https://github.com/CatalinPlesu/job_market_md_refactor",
-              technologies: ["Python", "Web Scraping", "Data Analysis"]
+                "An autonomous system that collects, processes, and analyzes job market data from Moldova. Features automated web scraping, data pipeline, analytics, and generates a GitHub Pages site with insights and visualizations.",
+              git_link: "https://github.com/CatalinPlesu/job-market",
+              technologies: ["Python", "Web Scraping", "Data Analysis", "GitHub Actions"],
+              status: "In Progress"
+            },
+            %{
+              name: "Homepage",
+              description:
+                "This personal website built with Elixir and Phoenix LiveView. Features a terminal-inspired UI with dynamic content rendering and minimal JavaScript.",
+              git_link: "https://github.com/CatalinPlesu/homepage",
+              live_link: "https://catalinplesu.xyz/",
+              technologies: ["Elixir", "Phoenix", "LiveView"]
+            },
+            %{
+              name: "Franken Pad",
+              description:
+                "Custom DIY macropad featuring 5 mechanical switches, 3 rotary encoders, and 3 toggle switches. Programmable with QMK firmware for custom macros and productivity workflows.",
+              git_link: "https://github.com/CatalinPlesu/franken_pad",
+              technologies: ["C", "QMK", "Hardware", "Embedded"]
             },
             %{
               name: "Demo",
@@ -102,20 +105,16 @@ defmodule Homepage.Data do
         links: %{
           links: [
             {"Github", "https://github.com/CatalinPlesu", "fa-brands fa-github"},
-            {"Gitlab", "https://gitlab.com/catalinplesu", "fa-brands fa-gitlab"},
             {"Telegram", "https://t.me/catalinplesu", "fa-brands fa-telegram"},
-            {"Reddit", "https://www.reddit.com/user/_katarin", "fa-brands fa-reddit"},
-            {"Twitter", "https://twitter.com/catalinplesu", "fa-brands fa-twitter"},
             {"YouTube", "https://www.youtube.com/channel/UC752pTuCebS37pCYwYPirow",
              "fa-brands fa-youtube"},
-            {"LinkedIn", "https://www.linkedin.com/in/c%C4%83t%C4%83lin-ple%C8%99u-042872209/",
-             "fa-brands fa-linkedin"}
+            {"Email", "mailto:catalin.plesu@proton.me", "fa-solid fa-envelope"}
           ]
         }
       ],
       footer: %{
         status: ~s[<i class="fa-solid fa-bolt"></i> System Ready],
-        last_updated: "17/10/2025"
+        last_updated: "01/01/2026"
       }
     }
   end
