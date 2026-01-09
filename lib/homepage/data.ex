@@ -67,7 +67,7 @@ defmodule Homepage.Data do
               description:
                 "A modern CV/resume builder with real-time preview and multiple export formats. Built with Ruby on Rails and deployed on Render.",
               git_link: "https://github.com/CatalinPlesu/cv_builder",
-              live_link: "https://cv-builder-qhps.onrender.com/",
+              live_link: "https://cv-builder.catalinplesu.xyz",
               technologies: ["Ruby", "Rails", "PostgreSQL", "Render"]
             },
             %{
